@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonListHeader, IonItem, IonLabel } from '@ionic/react';
 import React, {useState, useEffect} from 'react';
-import './Tab1.css';
+import './Tab3.css';
 
 const Tab1: React.FC = () => {
   // dataset state variable to hold JSON data from WP
@@ -30,7 +30,7 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         {/* use map() to loop through JSON array returned from WP */}
-        <IonList id="thing-list">
+        <IonList id="special-list">
           <IonListHeader>Special</IonListHeader>
           {dataset.map((item, index) => (
             <IonItem lines="inset" key={index}>
@@ -40,6 +40,7 @@ const Tab1: React.FC = () => {
                 <p>{item.special_name}</p>
                 <p>{item.special_number}</p>
                 <address>{item.special_email}</address>
+                <img alt="My image" src={item.guid} />
               </IonLabel>
             </IonItem>
           ))}

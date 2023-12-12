@@ -38,6 +38,7 @@ const Tab1: React.FC = () => {
                 <h4>{item.post_title}</h4>
                 <p>{item.thing_description}</p>
                 <p>{item.thing_address}</p>
+                <p>{item.thing_number}</p>
                 <img alt="My image" src={item.guid} />
               </IonLabel>
             </IonItem>
